@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/9 | Raina Blog</title>
+  <title>Swift starting | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Raina Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/09/index.html">
+  <meta name="description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift starting">
+<meta property="og:url" content="http://yoursite.com/2017/10/24/Swift-starting/index.html">
 <meta property="og:site_name" content="Raina Blog">
+<meta property="og:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-24T11:59:01.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Raina Blog">
+<meta name="twitter:title" content="Swift starting">
+<meta name="twitter:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -156,125 +160,155 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Swift-starting" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Swift starting
+    </h1>
+  
+
+        
+        <a href="/2017/10/24/Swift-starting/" class="archive-article-date">
+  	<time datetime="2017-10-24T09:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>array</p>
+<p>声明：</p>
+<p>var arr = [1,2,3]</p>
+<p>var arr = [Int](repeating: 0, count:3)  //[0,0,0]</p>
+<p>var arr:[Int]; arr = []  //空数组1</p>
+<p>var arr:[Int] = []  //空数组2</p>
+<p>var arr = [Int]()  //空数组3</p>
+<p>var arr = Array\<int>()  //空数组4</int></p>
+</li>
+</ol>
+<ol>
+<li><p>Optional Type</p>
+<p>Int? 等价于 Optional\<int></int></p>
+<p>Int? 类型的变量 oVar 表示 oVar 要嘛包含Int类型的数据，要嘛为nil —— 非Optional Type的变量不能赋值为nil；也就是说，Optional类型允许变量没有值，其它类型如果没有初始化值在使用时会报错 —— 比如通过下标访问数组元素时返回Optional类型，越界时可以返回nil;</p>
+<p>在声明一个Optional类型变量时如果没有赋初始值，那么默认为nil；</p>
+<p>打印Optional变量：当使用!来强制拆包(force-unwrap)的时候，一定要确保这个optional value一定包含一个非nil 值。否则使用可选绑定（optional binding）：</p>
+<p>​    if let op = op {print(op)}</p>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// convertedNumber is an optional value  </div><div class="line">// 如果convertedNumber存在值，那么表达式就是true  </div><div class="line">if convertedNumber &#123;  </div><div class="line">  // 如果能够进到这里，表示convertedNumber一定有值，那么我们就可以强制拆包  </div><div class="line">  // 强制拆包就是在optional value后面添加一个！，也就是convertedNumber!  </div><div class="line">  // 但这也是需要注意的地方，使用强制拆包一定要确保这个可选值有值，否则  </div><div class="line">  // 强制拆包会崩溃  </div><div class="line">  println(&quot;\(possibleNumber) has an integer value of \(convertedNumber!)&quot;)  </div><div class="line">&#125; else &#123;  </div><div class="line">  println(&quot;\(possibleNumber) could not be converted to an integer&quot;)  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/Windows-Usage-Tips/" class="archive-article-date">
-  	<time datetime="2017-09-15T05:57:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/Windows-Usage-Tips/">Windows Usage Tips</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/24/Swift-starting/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/12/python3/" class="archive-article-date">
-  	<time datetime="2017-09-12T12:03:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/06/Happy-Valley-in-sh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Happy Valley in sh</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/12/python3/">python3 tips</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/TechNotes/" class="article-tag-list-link color5">TechNotes</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/08/css-tips/" class="archive-article-date">
-  	<time datetime="2017-09-08T13:12:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/08/css-tips/">css tips</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -302,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
