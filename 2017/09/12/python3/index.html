@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>python3 tips | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="string： string=”runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号()里 set： 使用大括号 { } 或者 set() 函数创">
+  <meta name="description" content="string： string=“runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号**()**里 set： 使用大括号 { } 或者 set()">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python3 tips">
 <meta property="og:url" content="http://yoursite.com/2017/09/12/python3/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="string： string=”runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号()里 set： 使用大括号 { } 或者 set() 函数创">
+<meta property="og:description" content="string： string=“runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号**()**里 set： 使用大括号 { } 或者 set()">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-14T15:31:42.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python3 tips">
-<meta name="twitter:description" content="string： string=”runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号()里 set： 使用大括号 { } 或者 set() 函数创">
+<meta name="twitter:description" content="string： string=“runoob” print(string[2:5])输出noo而不是noob，也就是说只取到下标5之前 list： a = [1, 2, 3, 4, 5, 6] print(a[2:5])输出[3,4,5]，也是只取到下标5之前 tuple： 与list类似，不同之处在于元组的元素不能修改，元组写在小括号**()**里 set： 使用大括号 { } 或者 set()">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -182,46 +182,69 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>string</strong>：</p>
-<p>string=”runoob”</p>
+<p>string=“runoob”</p>
 <p>print(string[2:5])输出<em>noo</em>而不是<em>noob</em>，也就是说只取到下标5之前</p>
 <p><strong>list</strong>：</p>
 <p>a = [1, 2, 3, 4, 5, 6]</p>
 <p>print(a[2:5])输出[3,4,5]，也是只取到下标5之前</p>
 <p><strong>tuple</strong>：</p>
-<p>与list类似，不同之处在于元组的元素不能修改，元组写在小括号<strong>()</strong>里</p>
+<p>与list类似，不同之处在于元组的元素不能修改，元组写在小括号**()**里</p>
 <p><strong>set</strong>：</p>
 <p>使用大括号 { } 或者 set() 函数创建集合，创建一个空集合必须用 set() 而不是 { }， { } 是用来创建一个空字典</p>
 <p><strong>dict</strong>：</p>
 <p>可以从元组列表转换：</p>
 <blockquote>
-<p>>>>dict([(‘Runoob’, 1), (‘Google’, 2), (‘Taobao’, 3)]) </p>
+<p>&gt;&gt;&gt;dict([(‘Runoob’, 1), (‘Google’, 2), (‘Taobao’, 3)])</p>
 <p>{‘Taobao’: 3, ‘Runoob’: 1, ‘Google’: 2}</p>
 </blockquote>
 <p><strong>is &amp; ==</strong>：</p>
 <blockquote>
-<p>a = [1, 2, 3]<br>b = a<br>b is a<br>> True<br>b == a<br>> True</p>
-<p>b = a[:]<br>b is a<br>> False<br>b == a<br>> True</p>
+<p>a = [1, 2, 3]<br>
+b = a<br>
+b is a<br>
+&gt; True<br>
+b == a<br>
+&gt; True</p>
+<p>b = a[:]<br>
+b is a<br>
+&gt; False<br>
+b == a<br>
+&gt; True</p>
 </blockquote>
 <p><strong>round:</strong></p>
-<p> round(10.5)为10，round(11.5)为12 ，Python 所谓的<strong>奇进偶弃</strong></p>
+<p>round(10.5)为10，round(11.5)为12 ，Python 所谓的<strong>奇进偶弃</strong></p>
 <p><strong>yield</strong>:</p>
 <blockquote>
 <p>import sys</p>
-<p>def fibonacci(n):         # 生成器函数 - 斐波那契<br>​    a, b, counter = 0, 1, 0<br>​    while True:<br>​        if (counter &gt; n):<br>​            return<br>​        yield a<br>​        a, b = b, a + b<br>​        counter += 1<br>f = fibonacci(10)         # f是一个迭代器，由生成器返回生成</p>
-<p>while True:<br>​    try:<br>​        print (next(f), end=” “)<br>​    except StopIteration:<br>​        sys.exit()</p>
+<p>def fibonacci(n):         # 生成器函数 - 斐波那契<br>
+​    a, b, counter = 0, 1, 0<br>
+​    while True:<br>
+​        if (counter &gt; n):<br>
+​            return<br>
+​        yield a<br>
+​        a, b = b, a + b<br>
+​        counter += 1<br>
+f = fibonacci(10)         # f是一个迭代器，由生成器返回生成</p>
+<p>while True:<br>
+​    try:<br>
+​        print (next(f), end=&quot; &quot;)<br>
+​    except StopIteration:<br>
+​        sys.exit()</p>
 </blockquote>
 <p><strong>python 传不可变对象</strong></p>
 <p>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
 <blockquote>
 <p>def ChangeInt( a ):</p>
-<p>​    a = 10</p>
-<p>b = 2<br>ChangeInt(b)<br>print( b )                # 结果是 2</p>
+<p>​	a = 10</p>
+<p>b = 2<br>
+ChangeInt(b)<br>
+print( b )                # 结果是 2</p>
 </blockquote>
 <p><strong>默认参数必须放在最后面</strong></p>
 <p>def printinfo( age=35,name):   # 默认参数不在最后，会报错</p>
 <p><strong>dir()</strong>:</p>
 <p>内置的函数 dir() 可以找到模块内定义的所有名称。以一个字符串列表的形式返回:</p>
-<p>dir(sys) ：<code>[&#39;__displayhook__&#39;, &#39;__doc__&#39;, &#39;__excepthook__&#39;, ...]</code></p>
+<p>dir(sys) ：<code>['__displayhook__', '__doc__', '__excepthook__', ...]</code></p>
 <p>4379</p>
 <p><strong>import</strong>：</p>
 <p>如果在结构中包是一个子包（比如这个例子中对于包sound来说），而你又想导入兄弟包（同级别的包）你就得使用导入绝对的路径来导入。比如，如果模块sound.filters.vocoder 要使用包sound.effects中的模块echo，你就要写成 from sound.effects import echo。</p>
@@ -457,11 +480,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

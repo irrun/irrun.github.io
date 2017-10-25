@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo+Github搭建个人博客 | Raina Blog</title>
+  <title>Hexo+Github开坑记 | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io  2.安装nodejs12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
+  <meta name="description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io 2.安装nodejs 12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+Github搭建个人博客">
+<meta property="og:title" content="Hexo+Github开坑记">
 <meta property="og:url" content="http://yoursite.com/2017/08/30/Hexo+Github搭建个人博客/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io  2.安装nodejs12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
+<meta property="og:description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io 2.安装nodejs 12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-13T04:10:05.785Z">
+<meta property="og:updated_time" content="2017-10-25T07:01:39.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+Github搭建个人博客">
-<meta name="twitter:description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io  2.安装nodejs12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
+<meta name="twitter:title" content="Hexo+Github开坑记">
+<meta name="twitter:description" content="Please check Hexo for more info. 1.Github建仓irrun.github.io 2.安装nodejs 12345npm install hexo -ghexo version #查看Hexo的版本hexo init myblogcd myblognpm install 修改 _config.yml 建立关联">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -168,7 +168,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo+Github搭建个人博客
+      Hexo+Github开坑记
     </h1>
   
 
@@ -182,15 +182,50 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Please check <a href="https://hexo.io/docs/" target="_blank" rel="external">Hexo</a> for more info.</p>
-<p>1.Github建仓irrun.github.io </p>
-<p>2.安装nodejs<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div><div class="line">hexo version <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo init myblog</div><div class="line"><span class="built_in">cd</span> myblog</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
-<p>修改 _config.yml 建立关联<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/irrun/irrun.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p><a href="http://1.xn--Githubirrun-2o0r039n.github.io" target="_blank" rel="external">1.Github建仓irrun.github.io</a></p>
+<p>2.安装nodejs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div><div class="line">hexo version <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo init myblog</div><div class="line"><span class="built_in">cd</span> myblog</div><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>修改 _config.yml 建立关联</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/irrun/irrun.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>3.Run server</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"My New Post"</span> <span class="comment">#新建文章</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a> <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
 <p>4.Generate static files &amp; Deploy to remote sites</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a> <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="emoji"><a class="header-anchor" href="#emoji">¶</a>emoji###</h3>
+<p>如何让 markdown 可以解析 emoji 呢？实际上我们发现，在编辑器中输入 <code>:blush:</code> 并没有表情出现，是为什么呢？这是 markdown 渲染引擎的问题 ，将 markdown 变成 html 的转换器叫做<code>markdown渲染器</code> 。 Hexo默认是采用<code>hexo-renderer-marked</code>,这个渲染器不支持插件扩展，当然就不行了，还有一个支持插件扩展的是 <code>hexo-renderer-markdown-it</code>，这个支持插件配置，可以使用<code>markwon-it-emoji</code> 插件来支持emoji。需要将原来的 <code>marked</code> 渲染器换成 <code>markdown-it</code>渲染器。所以我们可以使用这个渲染引擎来支持emoji表情。</p>
+<ul>
+<li>
+<p>更换渲染器</p>
+<p>进入blog根目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm un hexo-renderer-marked --save</div><div class="line">npm i hexo-renderer-markdown-it --save</div></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装emoji插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd node_modules/hexo-renderer-markdown-it/</div><div class="line">npm install markdown-it-emoji --save</div></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编辑站点配置文件 博客根目录下的_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"># Markdown-it config</div><div class="line">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</div><div class="line">markdown:</div><div class="line">render:</div><div class="line">  html: true</div><div class="line">  xhtmlOut: false</div><div class="line">  breaks: true</div><div class="line">  linkify: true</div><div class="line">  typographer: true</div><div class="line">  quotes: &apos;“”‘’&apos;</div><div class="line">plugins:</div><div class="line">  - markdown-it-abbr</div><div class="line">  - markdown-it-footnote</div><div class="line">  - markdown-it-ins</div><div class="line">  - markdown-it-sub</div><div class="line">  - markdown-it-sup</div><div class="line">  - markdown-it-emoji  # add emoji</div><div class="line">anchors:</div><div class="line">  level: 2</div><div class="line">  collisionSuffix: &apos;v&apos;</div><div class="line">  permalink: true</div><div class="line">  permalinkClass: header-anchor</div><div class="line">  permalinkSymbol: ¶</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>hexo-renderer-markdown-it</code>详细配置请进: <a href="https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/Advanced-Configuration" target="_blank" rel="external">Advanced Configuration</a></p>
+<ul>
+<li>
+<p>添加emoji表情<br>
+先安装emoji  <code>npm install emoji</code><br>
+安装完之后，编辑<code>node_modules/markdown-it-emoji/index.js</code>文件，最终文件像:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var emojies_defs      = require(&apos;./lib/data/full.json&apos;);</div><div class="line">var emojies_shortcuts = require(&apos;./lib/data/shortcuts&apos;);</div><div class="line">var emoji_html        = require(&apos;./lib/render&apos;);</div><div class="line">var emoji_replace     = require(&apos;./lib/replace&apos;);</div><div class="line">var normalize_opts    = require(&apos;./lib/normalize_opts&apos;);</div><div class="line">var twemoji           = require(&apos;twemoji&apos;)  //添加twemoji</div><div class="line">module.exports = function emoji_plugin(md, options) &#123;</div><div class="line">var defaults = &#123;</div><div class="line">  defs: emojies_defs,</div><div class="line">  shortcuts: emojies_shortcuts,</div><div class="line">  enabled: []</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var opts = normalize_opts(md.utils.assign(&#123;&#125;, defaults, options || &#123;&#125;));</div><div class="line"></div><div class="line">md.renderer.rules.emoji = emoji_html;</div><div class="line">//使用 twemoji 渲染</div><div class="line">md.renderer.rules.emoji = function(token, idx) &#123;</div><div class="line">  return twemoji.parse(token[idx].content);</div><div class="line">&#125;;</div><div class="line">md.core.ruler.push(&apos;emoji&apos;, emoji_replace(md, opts.defs, opts.shortcuts, opts.scanRE, opts.replaceRE));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li>
+<p>最后一步，css控制表情</p>
+</li>
+</ul>
+<p>只需要在主题CSS中添加你的CSS代码就行了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.emoji&#123;</div><div class="line">   //your style</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于图片被绑定这个问题，需要自己去排查，每个主题的写法有差异，通过dom追踪来查看，进行排除</p>
 
       
 
@@ -421,11 +456,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

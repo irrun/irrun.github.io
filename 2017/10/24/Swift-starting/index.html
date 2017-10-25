@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Swift starting | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
+  <meta name="description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array&amp;lt;Int&amp;gt;()  //空数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift starting">
 <meta property="og:url" content="http://yoursite.com/2017/10/24/Swift-starting/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
+<meta property="og:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array&amp;lt;Int&amp;gt;()  //空数组">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-10-24T11:59:01.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift starting">
-<meta name="twitter:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array\()  //空数组4    Option">
+<meta name="twitter:description" content="array 声明： var arr = [1,2,3] var arr = [Int](repeating: 0, count:3)  //[0,0,0] var arr:[Int]; arr = []  //空数组1 var arr:[Int] = []  //空数组2 var arr = [Int]()  //空数组3 var arr = Array&amp;lt;Int&amp;gt;()  //空数组">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -181,23 +181,25 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><p>array</p>
+<li>
+<p>array</p>
 <p>声明：</p>
 <p>var arr = [1,2,3]</p>
 <p>var arr = [Int](repeating: 0, count:3)  //[0,0,0]</p>
 <p>var arr:[Int]; arr = []  //空数组1</p>
 <p>var arr:[Int] = []  //空数组2</p>
 <p>var arr = [Int]()  //空数组3</p>
-<p>var arr = Array\<int>()  //空数组4</int></p>
+<p>var arr = Array&lt;Int&gt;()  //空数组4</p>
 </li>
 </ol>
-<ol>
-<li><p>Optional Type</p>
-<p>Int? 等价于 Optional\<int></int></p>
+<ol start="2">
+<li>
+<p>Optional Type</p>
+<p>Int? 等价于 Optional&lt;Int&gt;</p>
 <p>Int? 类型的变量 oVar 表示 oVar 要嘛包含Int类型的数据，要嘛为nil —— 非Optional Type的变量不能赋值为nil；也就是说，Optional类型允许变量没有值，其它类型如果没有初始化值在使用时会报错 —— 比如通过下标访问数组元素时返回Optional类型，越界时可以返回nil;</p>
 <p>在声明一个Optional类型变量时如果没有赋初始值，那么默认为nil；</p>
 <p>打印Optional变量：当使用!来强制拆包(force-unwrap)的时候，一定要确保这个optional value一定包含一个非nil 值。否则使用可选绑定（optional binding）：</p>
-<p>​    if let op = op {print(op)}</p>
+<p>​	if let op = op {print(op)}</p>
 <p>或者</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// convertedNumber is an optional value  </div><div class="line">// 如果convertedNumber存在值，那么表达式就是true  </div><div class="line">if convertedNumber &#123;  </div><div class="line">  // 如果能够进到这里，表示convertedNumber一定有值，那么我们就可以强制拆包  </div><div class="line">  // 强制拆包就是在optional value后面添加一个！，也就是convertedNumber!  </div><div class="line">  // 但这也是需要注意的地方，使用强制拆包一定要确保这个可选值有值，否则  </div><div class="line">  // 强制拆包会崩溃  </div><div class="line">  println(&quot;\(possibleNumber) has an integer value of \(convertedNumber!)&quot;)  </div><div class="line">&#125; else &#123;  </div><div class="line">  println(&quot;\(possibleNumber) could not be converted to an integer&quot;)  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>​</p>
@@ -402,11 +404,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

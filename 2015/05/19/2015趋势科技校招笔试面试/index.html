@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>2015趋势科技校招笔试面试 | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造">
+  <meta name="description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的? 答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构">
 <meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2015趋势科技校招笔试面试">
 <meta property="og:url" content="http://yoursite.com/2015/05/19/2015趋势科技校招笔试面试/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造">
+<meta property="og:description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的? 答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-13T04:10:05.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2015趋势科技校招笔试面试">
-<meta name="twitter:description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造">
+<meta name="twitter:description" content="一、笔试 百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题： 1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的? 答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -183,20 +183,43 @@
       
         <p>一、笔试</p>
 <p>百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题：</p>
-<p>1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?<br>答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造函数被调用时进行初始化的,这是实现多态的关键.</p>
-<p>2.一个父类写了一个virtual 函数，如果子类覆盖它的函数不加virtual ,也能实现多态? 在子类的空间里，有没有父类的这个函数，或者父类的私有变量?<br>答案：只要基类在定义成员函数时已经声明了virtual关键字，在派生类实现的时候覆盖该函数时，virtual关键字可加可不加，不影响多态的实现。子类的空间里有父类的所有变量(static除外)。  </p>
-<p>3.构造函数可以为虚函数吗？<br>不能，构造函数是在对象完全构造之前运行的，在构造函数运行的时候，对象的动态类型还不完整。</p>
+<p>1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?<br>
+答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造函数被调用时进行初始化的,这是实现多态的关键.</p>
+<p>2.一个父类写了一个virtual 函数，如果子类覆盖它的函数不加virtual ,也能实现多态? 在子类的空间里，有没有父类的这个函数，或者父类的私有变量?<br>
+答案：只要基类在定义成员函数时已经声明了virtual关键字，在派生类实现的时候覆盖该函数时，virtual关键字可加可不加，不影响多态的实现。子类的空间里有父类的所有变量(static除外)。</p>
+<p>3.构造函数可以为虚函数吗？<br>
+不能，构造函数是在对象完全构造之前运行的，在构造函数运行的时候，对象的动态类型还不完整。</p>
 <a id="more"></a>
-<p>4.常成员函数和非常成员函数可以共存吗？<br>可以，常量对象调用常成员函数</p>
-<p>5.对于下列的程序片段，哪些表达式的结果为6？BC<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int arr[3][3]=&#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;,&#123;7,8,9&#125;&#125;;int i=1,j=2;</div><div class="line">A.**(arr+3*i+j)　　B.*(*(arr+i)+j)　　C.*(arr[i]+j)　　D.*(arr+3*i+j)</div></pre></td></tr></table></figure></p>
-<p>6.string str[]={“trend”,”micro”,”soft”};<br>cout&lt;&lt;sizeof(str)&lt;&lt;”   “&lt;&lt;sizeof(string)&lt;&lt;endl;//96 32</p>
+<p>4.常成员函数和非常成员函数可以共存吗？<br>
+可以，常量对象调用常成员函数</p>
+<p>5.对于下列的程序片段，哪些表达式的结果为6？BC</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int arr[3][3]=&#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;,&#123;7,8,9&#125;&#125;;int i=1,j=2;</div><div class="line">A.**(arr+3*i+j)　　B.*(*(arr+i)+j)　　C.*(arr[i]+j)　　D.*(arr+3*i+j)</div></pre></td></tr></table></figure>
+<p>6.string str[]={“trend”,“micro”,“soft”};<br>
+cout&lt;&lt;sizeof(str)&lt;&lt;&quot;   &quot;&lt;&lt;sizeof(string)&lt;&lt;endl;//96 32</p>
 <p>*sizeof 不是函数，也不是一元运算符，他是个类似宏定义的特殊关键字；sizeof（）括号内在编译过程中是不被编译的，而是被替代类型，如 int a=8；sizeof（a）；在编译过程中，它不管a的值是什么，只是被替换成类型 sizeof（int）； 结果为4.如果sizeof（a=6）；呢,也是一样的转换成a的类型，但是要注意 因为a=6是不被编译的，所以执行完sizeof（a=6）；a的值还是6，是不变的.</p>
 <p>二、面试</p>
 <p>面试真真是想吐槽一下，也不知道是趋势最近不缺人还是咋的，也有可能我第一个还没安排好流程，我报的是开发，一上来就安排了一个搞测试的，然后聊到一半正到重点被打断，接着换了一个据说来自最有钱的部门的技术经理，然后又重新开始，c++基础、继承、多态、内存分配机制，实现快速插入查找用什么数据结构最好，问得都挺简单的，让写了一个字符串替换的小程序（输入一个带有’\r\n’的字符串，将其中的’\r\n’全部替换为’\r’,当时只傻傻的用两层循环实现）；</p>
 <p>回来后研究了下，可以转string实现：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//用string的replace()或erase()和insert()</div><div class="line">const char* replace1(char *input)&#123;    </div><div class="line">    string s=input;</div><div class="line">    string src=<span class="string">"\r\n"</span>;</div><div class="line">    string dest=<span class="string">"t"</span>;</div><div class="line">    string::size_type pos=0;</div><div class="line">    <span class="keyword">while</span>((pos=s.find(src,pos))!=string::npos)&#123;</div><div class="line">        s.replace(pos,src.size(),dest);//s.erase(pos,src.size());s.insert(pos,dest);</div><div class="line">        pos+=dest.size();</div><div class="line">    &#125;</div><div class="line">    char *end=new char[strlen(input)+1];</div><div class="line">    strcpy(end,s.c_str());</div><div class="line">    <span class="built_in">return</span> end;</div><div class="line">    //<span class="built_in">return</span> s.c_str();//error: s对象被释放</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>稍微难一点关于STL里面map底层是通过什么数据结构实现的？TCP是阻塞机制的吗？</p>
-<p><strong>C++STL底层数据结构实现</strong>（重要，待研究）:<br>1.vector 底层数据结构为数组 ，支持快速随机访问<br>2.list 底层数据结构为双向链表，支持快速增删<br>3.deque 底层数据结构为一个中央控制器和多个缓冲区，详细见STL源码剖析P146，支持首尾（中间不能）快速增删，也支持随机访问。 deque是一个双端队列(double-ended queue)，也是在堆中保存内容的.它的保存形式如下:<br>[堆1] –&gt; [堆2] –&gt;[堆3] –&gt; …<br>每个堆保存好几个元素,然后堆和堆之间有指针指向,看起来像是list和vector的结合品.<br>4.stack 底层一般用list或deque实现，封闭头部即可，不用vector的原因应该是容量大小有限制，扩容耗时<br>5.queue 底层一般用list或deque实现，封闭头部即可，不用vector的原因应该是容量大小有限制，扩容耗时<br>（stack和queue其实是适配器,而不叫容器，因为是对容器的再封装）<br>6.priority_queue 的底层数据结构一般为vector为底层容器，堆heap为处理规则来管理底层容器实现<br>7.set 底层数据结构为红黑树，有序，不重复<br>8.multiset 底层数据结构为红黑树，有序，可重复<br>9.map 底层数据结构为红黑树，有序，不重复<br>10.multimap 底层数据结构为红黑树，有序，可重复<br>11.hash_set 底层数据结构为hash表，无序，不重复<br>12.hash_multiset 底层数据结构为hash表，无序，可重复<br>13.hash_map 底层数据结构为hash表，无序，不重复<br>14.hash_multimap 底层数据结构为hash表，无序，可重复 </p>
+<p><strong>C++STL底层数据结构实现</strong>（重要，待研究）:<br>
+1.vector 底层数据结构为数组 ，支持快速随机访问<br>
+2.list 底层数据结构为双向链表，支持快速增删<br>
+3.deque 底层数据结构为一个中央控制器和多个缓冲区，详细见STL源码剖析P146，支持首尾（中间不能）快速增删，也支持随机访问。 deque是一个双端队列(double-ended queue)，也是在堆中保存内容的.它的保存形式如下:<br>
+[堆1] --&gt; [堆2] --&gt;[堆3] --&gt; …<br>
+每个堆保存好几个元素,然后堆和堆之间有指针指向,看起来像是list和vector的结合品.<br>
+4.stack 底层一般用list或deque实现，封闭头部即可，不用vector的原因应该是容量大小有限制，扩容耗时<br>
+5.queue 底层一般用list或deque实现，封闭头部即可，不用vector的原因应该是容量大小有限制，扩容耗时<br>
+（stack和queue其实是适配器,而不叫容器，因为是对容器的再封装）<br>
+6.priority_queue 的底层数据结构一般为vector为底层容器，堆heap为处理规则来管理底层容器实现<br>
+7.set 底层数据结构为红黑树，有序，不重复<br>
+8.multiset 底层数据结构为红黑树，有序，可重复<br>
+9.map 底层数据结构为红黑树，有序，不重复<br>
+10.multimap 底层数据结构为红黑树，有序，可重复<br>
+11.hash_set 底层数据结构为hash表，无序，不重复<br>
+12.hash_multiset 底层数据结构为hash表，无序，可重复<br>
+13.hash_map 底层数据结构为hash表，无序，不重复<br>
+14.hash_multimap 底层数据结构为hash表，无序，可重复</p>
 
       
 
@@ -427,11 +450,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

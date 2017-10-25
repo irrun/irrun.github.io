@@ -182,11 +182,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>昨天参加了华为南研所校招的机试，一共三道题，第一题很简单，输入一个字符串格式的日期，年-月，输出该月有多少天，主要注意闰年（（%4==0&amp;&amp;%100！=0）||%400==0）2月的不同；第二题是判断字符串的括号组成正确与否，用栈解决；第三题限定时间，没有做出来，今天问了同学，记录一下：</p>
-<p>/<em>输入n行m列矩阵，矩阵的每个位置只能是0或1，求最大的正方子矩阵边长，要求子矩阵内皆为1。如输入：<br>3 3<br>1 1 1<br>1 1 1<br>0 1 1<br>输出：2</em>/  </p>
+<p>/<em>输入n行m列矩阵，矩阵的每个位置只能是0或1，求最大的正方子矩阵边长，要求子矩阵内皆为1。如输入：<br>
+3 3<br>
+1 1 1<br>
+1 1 1<br>
+0 1 1<br>
+输出：2</em>/</p>
 <p>思路主要是在正方矩阵右下角记录大小</p>
 <a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;iostream&gt;</span></div><div class="line">using namespace std;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">　　int n,m;</div><div class="line">　　cin&gt;&gt;n&gt;&gt;m;</div><div class="line">　　int **array=new int*[n];</div><div class="line">　　<span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">　　　　array[i]=new int[m];</div><div class="line">　　　　<span class="keyword">for</span>(int j=0;j&lt;m;j++)&#123;</div><div class="line">　　　　　　cin&gt;&gt;array[i][j];</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;</div><div class="line">　　int max=0;</div><div class="line">　　<span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">　　　　<span class="keyword">for</span>(int j=0;j&lt;m;j++)&#123;</div><div class="line">　　　　　　<span class="keyword">if</span>(i&gt;0&amp;&amp;j&gt;0)&#123;</div><div class="line">　　　　　　　　int min=array[i-1][j-1];</div><div class="line">　　　　　　　　<span class="keyword">if</span>(array[i][j-1]&lt;min)min=array[i][j-1];</div><div class="line">　　　　　　　　<span class="keyword">if</span>(array[i-1][j]&lt;min)min=array[i-1][j];</div><div class="line">　　　　　　　　<span class="keyword">if</span>(min!=0&amp;&amp;array[i][j]!=0)</div><div class="line">　　　　　　　　array[i][j]+=min;//array[i][j]=min+1更节省时间</div><div class="line">　　　　　　&#125;</div><div class="line">　　　　　　<span class="keyword">if</span>(array[i][j]&gt;max)max=array[i][j];</div><div class="line">　　　　&#125;</div><div class="line">　 &#125;</div><div class="line">   cout&lt;&lt;max;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>机试完了，紧接着会有变态的性格测试，难熬的35分钟，选择的时候注意积极乐观和前后一致就行了，不然会被叫重做，无语得很….。通过机试之后，下午就是面试了，一面主要问项目，我被问得很深很细，问了其他同学说是就随便聊聊，二面综合面，就是闲聊了。</p>
+<p>机试完了，紧接着会有变态的性格测试，难熬的35分钟，选择的时候注意积极乐观和前后一致就行了，不然会被叫重做，无语得很…。通过机试之后，下午就是面试了，一面主要问项目，我被问得很深很细，问了其他同学说是就随便聊聊，二面综合面，就是闲聊了。</p>
 
       
 
@@ -412,11 +417,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

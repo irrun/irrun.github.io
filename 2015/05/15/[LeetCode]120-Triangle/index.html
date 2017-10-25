@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>【LeetCode】120 - Triangle | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.For example, given the following triangle     [2],   [3,4],  [6,5,7], [4,">
+  <meta name="description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below. For example, given the following triangle     [2],    [3,4],   [6,5,7],">
 <meta name="keywords" content="algorithm,leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【LeetCode】120 - Triangle">
 <meta property="og:url" content="http://yoursite.com/2015/05/15/[LeetCode]120-Triangle/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.For example, given the following triangle     [2],   [3,4],  [6,5,7], [4,">
+<meta property="og:description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below. For example, given the following triangle     [2],    [3,4],   [6,5,7],">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-13T04:10:05.786Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【LeetCode】120 - Triangle">
-<meta name="twitter:description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.For example, given the following triangle     [2],   [3,4],  [6,5,7], [4,">
+<meta name="twitter:description" content="原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below. For example, given the following triangle     [2],    [3,4],   [6,5,7],">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -181,28 +181,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.<br>For example, given the following triangle </p>
-<pre><code>   [2],
-  [3,4],
- [6,5,7],
-[4,1,8,3]
-</code></pre><p>The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).</p>
+        <p>原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.<br>
+For example, given the following triangle</p>
+<pre><code>    [2],
+   [3,4],
+  [6,5,7],
+ [4,1,8,3]
+</code></pre>
+<p>The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).</p>
 <p>Note:Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
 <a id="more"></a>
-<p>相似修改：Number Triangle<br>Time limit: 1 second Memory limit: 64MB<br>Problem Description<br>Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</p>
+<p>相似修改：Number Triangle<br>
+Time limit: 1 second Memory limit: 64MB<br>
+Problem Description<br>
+Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</p>
 <pre><code>    7
    3 8
   8 1 0
  2 7 4 4
 4 5 2 6 5
-</code></pre><p>In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.</p>
-<p>Input Description<br>There are multiple test cases. The first line of each test case contains R (1 &lt;= R &lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.</p>
-<p>Output Description<br>Print a single line containing the largest sum using the traversal specified for each test case.</p>
-<p>Sample Input<br>5<br>    7<br>   3 8<br>  8 1 0<br> 2 7 4 4<br>4 5 2 6 5</p>
-<p>Sample Output<br>30</p>
+</code></pre>
+<p>In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.</p>
+<p>Input Description<br>
+There are multiple test cases. The first line of each test case contains R (1 &lt;= R &lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.</p>
+<p>Output Description<br>
+Print a single line containing the largest sum using the traversal specified for each test case.</p>
+<p>Sample Input<br>
+5<br>
+7<br>
+3 8<br>
+8 1 0<br>
+2 7 4 4<br>
+4 5 2 6 5</p>
+<p>Sample Output<br>
+30</p>
 <p>下面给出原题的解法：</p>
-<p>解法一：从上往下遍历,时间复杂度为O(n^2),且需要处理每行的头和尾<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int minimumTotal(vector&lt;vector&lt;int&gt; &gt; &amp;triangle) &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; temp(triangle);</div><div class="line">        vector&lt;vector&lt;int&gt;&gt;::size_type length=temp.size();    </div><div class="line">        int i,j;</div><div class="line">        <span class="keyword">for</span>(i=1;i&lt;length;i++)&#123;  </div><div class="line">            vector&lt;int&gt;::size_type length_inner = temp[i].size();  </div><div class="line">            <span class="keyword">for</span>(j=0;j&lt;length_inner;j++)&#123;  </div><div class="line">                <span class="keyword">if</span>(j == 0)&#123;  </div><div class="line">                    temp[i][j] = temp[i][j] + temp[i-1][j];  </div><div class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(j == length_inner - 1)&#123;  </div><div class="line">                    temp[i][j] = temp[i][j] + temp[i-1][j-1];  </div><div class="line">                &#125;<span class="keyword">else</span>&#123;  </div><div class="line">                    temp[i][j] = (temp[i][j] + temp[i-1][j-1] &lt; temp[i][j] + temp[i-1][j] ? temp[i][j] + temp[i-1][j-1]:temp[i][j] + temp[i-1][j]);  //求和最大的路径即<span class="string">'&lt;'</span>改成<span class="string">'&gt;'</span></div><div class="line">                &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125;</div><div class="line">        int min = temp[length-1][0];  </div><div class="line">        <span class="keyword">for</span>(i=1;i&lt;temp[length-1].size();i++)&#123;  </div><div class="line">            min = (min &lt; temp[length-1][i]?min:temp[length-1][i]);  //求和最大的仅做相应简单修改</div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">return</span> min;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>解法二：从下往上遍历,从倒数第二行开始计算每个元素与下一行与它相邻的两个元素的和，比较并保存最小值，最后triangle[0][0]即为结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;iostream&gt;</span></div><div class="line"><span class="comment">#include&lt;vector&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int maxmumTotal(vector&lt;vector&lt;int&gt;&gt; &amp;triangle)</div><div class="line">&#123;</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; temp(triangle);</div><div class="line">    <span class="keyword">for</span>(int i=temp.size()-2;i&gt;=0;i--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(int j=0;j&lt;temp[i].size();j++)</div><div class="line">        &#123;</div><div class="line">            temp[i][j]+=min(temp[i+1][j],temp[i+1][j+1]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> temp[0][0];</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int n = 0;</div><div class="line">    <span class="keyword">while</span> (cin &gt;&gt; n)</div><div class="line">    &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; tree;</div><div class="line">        <span class="keyword">for</span> (int i = 0; i &lt; n; ++i)</div><div class="line">        &#123;</div><div class="line">            vector&lt;int&gt; row;</div><div class="line">            <span class="keyword">for</span> (int j = 0; j &lt;= i; ++j)</div><div class="line">            &#123;</div><div class="line">                int temp = 0;</div><div class="line">                cin &gt;&gt; temp;</div><div class="line">                row.push_back(temp);</div><div class="line">            &#125;</div><div class="line">            tree.push_back(row);</div><div class="line">        &#125;</div><div class="line">        cout&lt;&lt;maxmumTotal(tree);</div><div class="line">    &#125;    </div><div class="line">    system(<span class="string">"pause"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>解法一：从上往下遍历,时间复杂度为O(n^2),且需要处理每行的头和尾</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int minimumTotal(vector&lt;vector&lt;int&gt; &gt; &amp;triangle) &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; temp(triangle);</div><div class="line">        vector&lt;vector&lt;int&gt;&gt;::size_type length=temp.size();    </div><div class="line">        int i,j;</div><div class="line">        <span class="keyword">for</span>(i=1;i&lt;length;i++)&#123;  </div><div class="line">            vector&lt;int&gt;::size_type length_inner = temp[i].size();  </div><div class="line">            <span class="keyword">for</span>(j=0;j&lt;length_inner;j++)&#123;  </div><div class="line">                <span class="keyword">if</span>(j == 0)&#123;  </div><div class="line">                    temp[i][j] = temp[i][j] + temp[i-1][j];  </div><div class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(j == length_inner - 1)&#123;  </div><div class="line">                    temp[i][j] = temp[i][j] + temp[i-1][j-1];  </div><div class="line">                &#125;<span class="keyword">else</span>&#123;  </div><div class="line">                    temp[i][j] = (temp[i][j] + temp[i-1][j-1] &lt; temp[i][j] + temp[i-1][j] ? temp[i][j] + temp[i-1][j-1]:temp[i][j] + temp[i-1][j]);  //求和最大的路径即<span class="string">'&lt;'</span>改成<span class="string">'&gt;'</span></div><div class="line">                &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125;</div><div class="line">        int min = temp[length-1][0];  </div><div class="line">        <span class="keyword">for</span>(i=1;i&lt;temp[length-1].size();i++)&#123;  </div><div class="line">            min = (min &lt; temp[length-1][i]?min:temp[length-1][i]);  //求和最大的仅做相应简单修改</div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">return</span> min;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>解法二：从下往上遍历,从倒数第二行开始计算每个元素与下一行与它相邻的两个元素的和，比较并保存最小值，最后triangle[0][0]即为结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;iostream&gt;</span></div><div class="line"><span class="comment">#include&lt;vector&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int maxmumTotal(vector&lt;vector&lt;int&gt;&gt; &amp;triangle)</div><div class="line">&#123;</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; temp(triangle);</div><div class="line">    <span class="keyword">for</span>(int i=temp.size()-2;i&gt;=0;i--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(int j=0;j&lt;temp[i].size();j++)</div><div class="line">        &#123;</div><div class="line">            temp[i][j]+=min(temp[i+1][j],temp[i+1][j+1]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> temp[0][0];</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int n = 0;</div><div class="line">    <span class="keyword">while</span> (cin &gt;&gt; n)</div><div class="line">    &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; tree;</div><div class="line">        <span class="keyword">for</span> (int i = 0; i &lt; n; ++i)</div><div class="line">        &#123;</div><div class="line">            vector&lt;int&gt; row;</div><div class="line">            <span class="keyword">for</span> (int j = 0; j &lt;= i; ++j)</div><div class="line">            &#123;</div><div class="line">                int temp = 0;</div><div class="line">                cin &gt;&gt; temp;</div><div class="line">                row.push_back(temp);</div><div class="line">            &#125;</div><div class="line">            tree.push_back(row);</div><div class="line">        &#125;</div><div class="line">        cout&lt;&lt;maxmumTotal(tree);</div><div class="line">    &#125;    </div><div class="line">    system(<span class="string">"pause"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
 
@@ -437,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

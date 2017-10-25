@@ -180,7 +180,13 @@
       
         <p>美国国家仪器NI也算是入驻上海很好的一家外企了，它是我们院的合作公司，加上今年NI在我们院扩招实习生，这次是一个难得的机会可以进入NI实习，可惜我并没有好好把握…</p>
 <p>一、笔试</p>
-<p>几个做错的印象特别深刻：<br>ICMP是干什么的？用于传输出错报告控制信息。<br>x&amp;（x-1)–&gt;判断x里有几个1，我居然紧张得数错1的个数。。。醉了<br>char转int是减去’0’!!!<br>LRU换页求失败次数还要加上刚开始的！！！<br>不稳定排序：堆排序、选择排序、希尔排序、快排。除了这四个，其他都是稳定排序！！<br>还有关于网络中求传输速率的，linux的等等，范围很广，总体略难。</p>
+<p>几个做错的印象特别深刻：<br>
+ICMP是干什么的？用于传输出错报告控制信息。<br>
+x&amp;（x-1)–&gt;判断x里有几个1，我居然紧张得数错1的个数。。。醉了<br>
+char转int是减去’0’!!!<br>
+LRU换页求失败次数还要加上刚开始的！！！<br>
+不稳定排序：堆排序、选择排序、希尔排序、快排。除了这四个，其他都是稳定排序！！<br>
+还有关于网络中求传输速率的，linux的等等，范围很广，总体略难。</p>
         
           <a class="article-more-a" href="/2015/05/14/2015NI校招笔试机试面试/#more">more >></a>
         
@@ -267,10 +273,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong><a href="http://ac.jobdu.com/problem.php?cid=1045&amp;pid=0" target="_blank" rel="external">题目</a>描述</strong>：<br>在一个M * N的矩阵中，所有的元素只有0和1，从这个矩阵中找出一个面积最大的全1子矩阵，所谓最大是指元素1的个数最多。</p>
-<p><strong>输入</strong>：<br>输入可能包含多个测试样例。<br>对于每个测试案例，输入的第一行是两个整数m、n(1&lt;=m、n&lt;=1000)：代表将要输入的矩阵的大小。<br>矩阵共有m行，每行有n个整数，分别是0或1，相邻两数之间严格用一个空格隔开。</p>
-<p><strong>输出</strong>：<br>对应每个测试案例，输出矩阵中面积最大的全1子矩阵的元素个数。</p>
-<p><strong>样例输入</strong>：<br>2 2<br>0 0<br>0 0<br>4 4<br>0 0 0 0<br>0 1 1 0<br>0 1 1 0<br>0 0 0 0<br><strong>样例输出</strong>：0 4</p>
+        <p><strong><a href="http://ac.jobdu.com/problem.php?cid=1045&amp;pid=0" target="_blank" rel="external">题目</a>描述</strong>：<br>
+在一个M * N的矩阵中，所有的元素只有0和1，从这个矩阵中找出一个面积最大的全1子矩阵，所谓最大是指元素1的个数最多。</p>
+<p><strong>输入</strong>：<br>
+输入可能包含多个测试样例。<br>
+对于每个测试案例，输入的第一行是两个整数m、n(1&lt;=m、n&lt;=1000)：代表将要输入的矩阵的大小。<br>
+矩阵共有m行，每行有n个整数，分别是0或1，相邻两数之间严格用一个空格隔开。</p>
+<p><strong>输出</strong>：<br>
+对应每个测试案例，输出矩阵中面积最大的全1子矩阵的元素个数。</p>
+<p><strong>样例输入</strong>：<br>
+2 2<br>
+0 0<br>
+0 0<br>
+4 4<br>
+0 0 0 0<br>
+0 1 1 0<br>
+0 1 1 0<br>
+0 0 0 0<br>
+<strong>样例输出</strong>：0 4</p>
         
           <a class="article-more-a" href="/2015/05/10/面积最大的全1子矩阵/#more">more >></a>
         
@@ -358,7 +378,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>昨天参加了华为南研所校招的机试，一共三道题，第一题很简单，输入一个字符串格式的日期，年-月，输出该月有多少天，主要注意闰年（（%4==0&amp;&amp;%100！=0）||%400==0）2月的不同；第二题是判断字符串的括号组成正确与否，用栈解决；第三题限定时间，没有做出来，今天问了同学，记录一下：</p>
-<p>/<em>输入n行m列矩阵，矩阵的每个位置只能是0或1，求最大的正方子矩阵边长，要求子矩阵内皆为1。如输入：<br>3 3<br>1 1 1<br>1 1 1<br>0 1 1<br>输出：2</em>/  </p>
+<p>/<em>输入n行m列矩阵，矩阵的每个位置只能是0或1，求最大的正方子矩阵边长，要求子矩阵内皆为1。如输入：<br>
+3 3<br>
+1 1 1<br>
+1 1 1<br>
+0 1 1<br>
+输出：2</em>/</p>
 <p>思路主要是在正方矩阵右下角记录大小</p>
         
           <a class="article-more-a" href="/2015/05/10/2015华为校招机试面试/#more">more >></a>
@@ -524,11 +549,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -179,23 +179,25 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><p>array</p>
+<li>
+<p>array</p>
 <p>声明：</p>
 <p>var arr = [1,2,3]</p>
 <p>var arr = [Int](repeating: 0, count:3)  //[0,0,0]</p>
 <p>var arr:[Int]; arr = []  //空数组1</p>
 <p>var arr:[Int] = []  //空数组2</p>
 <p>var arr = [Int]()  //空数组3</p>
-<p>var arr = Array\<int>()  //空数组4</int></p>
+<p>var arr = Array&lt;Int&gt;()  //空数组4</p>
 </li>
 </ol>
-<ol>
-<li><p>Optional Type</p>
-<p>Int? 等价于 Optional\<int></int></p>
+<ol start="2">
+<li>
+<p>Optional Type</p>
+<p>Int? 等价于 Optional&lt;Int&gt;</p>
 <p>Int? 类型的变量 oVar 表示 oVar 要嘛包含Int类型的数据，要嘛为nil —— 非Optional Type的变量不能赋值为nil；也就是说，Optional类型允许变量没有值，其它类型如果没有初始化值在使用时会报错 —— 比如通过下标访问数组元素时返回Optional类型，越界时可以返回nil;</p>
 <p>在声明一个Optional类型变量时如果没有赋初始值，那么默认为nil；</p>
 <p>打印Optional变量：当使用!来强制拆包(force-unwrap)的时候，一定要确保这个optional value一定包含一个非nil 值。否则使用可选绑定（optional binding）：</p>
-<p>​    if let op = op {print(op)}</p>
+<p>​	if let op = op {print(op)}</p>
 <p>或者</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// convertedNumber is an optional value  </div><div class="line">// 如果convertedNumber存在值，那么表达式就是true  </div><div class="line">if convertedNumber &#123;  </div><div class="line">  // 如果能够进到这里，表示convertedNumber一定有值，那么我们就可以强制拆包  </div><div class="line">  // 强制拆包就是在optional value后面添加一个！，也就是convertedNumber!  </div><div class="line">  // 但这也是需要注意的地方，使用强制拆包一定要确保这个可选值有值，否则  </div><div class="line">  // 强制拆包会崩溃  </div><div class="line">  println(&quot;\(possibleNumber) has an integer value of \(convertedNumber!)&quot;)  </div><div class="line">&#125; else &#123;  </div><div class="line">  println(&quot;\(possibleNumber) could not be converted to an integer&quot;)  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>​</p>
@@ -264,7 +266,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>偷偷回忆了一下寄几的峥嵘岁月：12年国庆南京，全城跑，难忘的年岁，很傻很开心；13年国庆青岛，蹭了好朋友的车，小资旅游初体验；14年国庆北京，还记得南锣鼓巷涌动的人头艰难的步伐…然而我们年轻的心并不介意拥挤；15年国庆江浙沪，上海深度游+千岛湖+新叶古村+…；16年国庆回乡游，好久没回家了</p>
-<p>17年国庆室内游:smile:，好吧都是因为今年投资太狂，经历了一场大封杀，凉了，嗯然而还是要对得起祖国母亲的生日，哦尅一日游走起！连绵大雨后第一个晴天，早起奔向欢乐谷，too young too naive的以为一天能刷完，项目太多人太多，计划流产，总之欢乐谷六个区一天绝对不够用，年卡有存在的道理，三次可以回本。敲黑板，4大过山车必玩，趁着年轻你懂的。</p>
+<p>17年国庆室内游<img class="emoji" draggable="false" alt="😄" src="https://twemoji.maxcdn.com/2/72x72/1f604.png">，好吧都是因为今年投资太狂，经历了一场大封杀，凉了，嗯然而还是要对得起祖国母亲的生日，哦尅一日游走起！连绵大雨后第一个晴天，早起奔向欢乐谷，too young too naive的以为一天能刷完，项目太多人太多，计划流产，总之欢乐谷六个区一天绝对不够用，年卡有存在的道理，三次可以回本。敲黑板，4大过山车必玩，趁着年轻你懂的。</p>
 <p><strong>欢乐时光：谷木游龙–天地双雄–摇摆伞</strong></p>
 <p>谷木第一个坡吓到我了，全程闭眼不敢叫，一上来就这么刺激QAQ，天地双雄虽然很高，仿佛不那么可怕，摇摆伞就小儿科了。</p>
 <p><img src="/assets/blogimg/gumuyoulong.jpg" alt="gumuyoulong"></p>
@@ -418,46 +420,69 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>string</strong>：</p>
-<p>string=”runoob”</p>
+<p>string=“runoob”</p>
 <p>print(string[2:5])输出<em>noo</em>而不是<em>noob</em>，也就是说只取到下标5之前</p>
 <p><strong>list</strong>：</p>
 <p>a = [1, 2, 3, 4, 5, 6]</p>
 <p>print(a[2:5])输出[3,4,5]，也是只取到下标5之前</p>
 <p><strong>tuple</strong>：</p>
-<p>与list类似，不同之处在于元组的元素不能修改，元组写在小括号<strong>()</strong>里</p>
+<p>与list类似，不同之处在于元组的元素不能修改，元组写在小括号**()**里</p>
 <p><strong>set</strong>：</p>
 <p>使用大括号 { } 或者 set() 函数创建集合，创建一个空集合必须用 set() 而不是 { }， { } 是用来创建一个空字典</p>
 <p><strong>dict</strong>：</p>
 <p>可以从元组列表转换：</p>
 <blockquote>
-<p>>>>dict([(‘Runoob’, 1), (‘Google’, 2), (‘Taobao’, 3)]) </p>
+<p>&gt;&gt;&gt;dict([(‘Runoob’, 1), (‘Google’, 2), (‘Taobao’, 3)])</p>
 <p>{‘Taobao’: 3, ‘Runoob’: 1, ‘Google’: 2}</p>
 </blockquote>
 <p><strong>is &amp; ==</strong>：</p>
 <blockquote>
-<p>a = [1, 2, 3]<br>b = a<br>b is a<br>> True<br>b == a<br>> True</p>
-<p>b = a[:]<br>b is a<br>> False<br>b == a<br>> True</p>
+<p>a = [1, 2, 3]<br>
+b = a<br>
+b is a<br>
+&gt; True<br>
+b == a<br>
+&gt; True</p>
+<p>b = a[:]<br>
+b is a<br>
+&gt; False<br>
+b == a<br>
+&gt; True</p>
 </blockquote>
 <p><strong>round:</strong></p>
-<p> round(10.5)为10，round(11.5)为12 ，Python 所谓的<strong>奇进偶弃</strong></p>
+<p>round(10.5)为10，round(11.5)为12 ，Python 所谓的<strong>奇进偶弃</strong></p>
 <p><strong>yield</strong>:</p>
 <blockquote>
 <p>import sys</p>
-<p>def fibonacci(n):         # 生成器函数 - 斐波那契<br>​    a, b, counter = 0, 1, 0<br>​    while True:<br>​        if (counter &gt; n):<br>​            return<br>​        yield a<br>​        a, b = b, a + b<br>​        counter += 1<br>f = fibonacci(10)         # f是一个迭代器，由生成器返回生成</p>
-<p>while True:<br>​    try:<br>​        print (next(f), end=” “)<br>​    except StopIteration:<br>​        sys.exit()</p>
+<p>def fibonacci(n):         # 生成器函数 - 斐波那契<br>
+​    a, b, counter = 0, 1, 0<br>
+​    while True:<br>
+​        if (counter &gt; n):<br>
+​            return<br>
+​        yield a<br>
+​        a, b = b, a + b<br>
+​        counter += 1<br>
+f = fibonacci(10)         # f是一个迭代器，由生成器返回生成</p>
+<p>while True:<br>
+​    try:<br>
+​        print (next(f), end=&quot; &quot;)<br>
+​    except StopIteration:<br>
+​        sys.exit()</p>
 </blockquote>
 <p><strong>python 传不可变对象</strong></p>
 <p>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
 <blockquote>
 <p>def ChangeInt( a ):</p>
-<p>​    a = 10</p>
-<p>b = 2<br>ChangeInt(b)<br>print( b )                # 结果是 2</p>
+<p>​	a = 10</p>
+<p>b = 2<br>
+ChangeInt(b)<br>
+print( b )                # 结果是 2</p>
 </blockquote>
 <p><strong>默认参数必须放在最后面</strong></p>
 <p>def printinfo( age=35,name):   # 默认参数不在最后，会报错</p>
 <p><strong>dir()</strong>:</p>
 <p>内置的函数 dir() 可以找到模块内定义的所有名称。以一个字符串列表的形式返回:</p>
-<p>dir(sys) ：<code>[&#39;__displayhook__&#39;, &#39;__doc__&#39;, &#39;__excepthook__&#39;, ...]</code></p>
+<p>dir(sys) ：<code>['__displayhook__', '__doc__', '__excepthook__', ...]</code></p>
 <p>4379</p>
 <p><strong>import</strong>：</p>
 <p>如果在结构中包是一个子包（比如这个例子中对于包sound来说），而你又想导入兄弟包（同级别的包）你就得使用导入绝对的路径来导入。比如，如果模块sound.filters.vocoder 要使用包sound.effects中的模块echo，你就要写成 from sound.effects import echo。</p>
@@ -597,7 +622,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/Hexo+Github搭建个人博客/">Hexo+Github搭建个人博客</a>
+      <a class="article-title" href="/2017/08/30/Hexo+Github搭建个人博客/">Hexo+Github开坑记</a>
     </h1>
   
 
@@ -611,9 +636,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Please check <a href="https://hexo.io/docs/" target="_blank" rel="external">Hexo</a> for more info.</p>
-<p>1.Github建仓irrun.github.io </p>
-<p>2.安装nodejs<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div><div class="line">hexo version <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo init myblog</div><div class="line"><span class="built_in">cd</span> myblog</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
-<p>修改 _config.yml 建立关联<br>
+<p><a href="http://1.xn--Githubirrun-2o0r039n.github.io" target="_blank" rel="external">1.Github建仓irrun.github.io</a></p>
+<p>2.安装nodejs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div><div class="line">hexo version <span class="comment">#查看Hexo的版本</span></div><div class="line">hexo init myblog</div><div class="line"><span class="built_in">cd</span> myblog</div><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>修改 _config.yml 建立关联</p>
         
           <a class="article-more-a" href="/2017/08/30/Hexo+Github搭建个人博客/#more">more >></a>
         
@@ -700,12 +726,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1./home/lvtest/test/test.py　　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from datetime import datetime</div><div class="line">now=datetime.now()</div><div class="line">f=open(<span class="string">'test.log'</span>,<span class="string">'a'</span>)</div><div class="line">f.write(<span class="string">'%s '</span>%now)</div><div class="line">f.close()</div></pre></td></tr></table></figure></p>
-<p>2.edit /etc/rc.local with adding codes below:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/lvtest/<span class="built_in">test</span></div><div class="line">su lvtest -c <span class="string">"python /home/lvtest/test/test.py"</span></div><div class="line"><span class="built_in">exit</span> 0　　<span class="comment"># ? if it is necessary</span></div></pre></td></tr></table></figure></p>
+        <p>1./home/lvtest/test/test.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from datetime import datetime</div><div class="line">now=datetime.now()</div><div class="line">f=open(<span class="string">'test.log'</span>,<span class="string">'a'</span>)</div><div class="line">f.write(<span class="string">'%s '</span>%now)</div><div class="line">f.close()</div></pre></td></tr></table></figure>
+<p>2.edit /etc/rc.local with adding codes below:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/lvtest/<span class="built_in">test</span></div><div class="line">su lvtest -c <span class="string">"python /home/lvtest/test/test.py"</span></div><div class="line"><span class="built_in">exit</span> 0　　<span class="comment"># ? if it is necessary</span></div></pre></td></tr></table></figure>
 <p>3.Make your /etc/rc.local executable in case it is not already executable by</p>
-<p>　　sudo chown root /etc/rc.local<br>　　sudo chmod 755 /etc/rc.local</p>
+<p>sudo chown root /etc/rc.local<br>
+　　sudo chmod 755 /etc/rc.local</p>
 <p>4.Check everything works fine by executing</p>
-<p>　　sudo /etc/rc.local start</p>
+<p>sudo /etc/rc.local start</p>
 
       
 
@@ -791,7 +820,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>题目示例： “abcdefgh” 循环右移3位得到 “defghabc”</p>
-<p>解法一：消耗额外的3个空间，空间复杂度为O(n)，当程序运行的空间比较苛刻的时候，不可取。时间复杂度为O(n)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    char <span class="built_in">source</span>[]=<span class="string">"abcdefg"</span>;</div><div class="line">    char *temp=new char[3];</div><div class="line">    int i;</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;3;i++)temp[i]=<span class="built_in">source</span>[i];</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;(strlen(<span class="built_in">source</span>)-3);i++)<span class="built_in">source</span>[i]=<span class="built_in">source</span>[i+3];</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;3;i++)<span class="built_in">source</span>[strlen(<span class="built_in">source</span>)-3+i]=temp[i];</div><div class="line">    cout&lt;&lt;<span class="built_in">source</span>&lt;&lt;endl;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>解法一：消耗额外的3个空间，空间复杂度为O(n)，当程序运行的空间比较苛刻的时候，不可取。时间复杂度为O(n)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    char <span class="built_in">source</span>[]=<span class="string">"abcdefg"</span>;</div><div class="line">    char *temp=new char[3];</div><div class="line">    int i;</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;3;i++)temp[i]=<span class="built_in">source</span>[i];</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;(strlen(<span class="built_in">source</span>)-3);i++)<span class="built_in">source</span>[i]=<span class="built_in">source</span>[i+3];</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;3;i++)<span class="built_in">source</span>[strlen(<span class="built_in">source</span>)-3+i]=temp[i];</div><div class="line">    cout&lt;&lt;<span class="built_in">source</span>&lt;&lt;endl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2015/05/24/字符串循环移位/#more">more >></a>
         
@@ -880,9 +910,12 @@
       
         <p>一、笔试</p>
 <p>百度文库（趋势科技2015校园招聘笔试题）有很多原题，考的范围很广，计算机网络：协议，c++：继承、字节对齐、二维数组等等，总体一般，不深不浅。贴几道印象深的题：</p>
-<p>1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?<br>答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造函数被调用时进行初始化的,这是实现多态的关键.</p>
-<p>2.一个父类写了一个virtual 函数，如果子类覆盖它的函数不加virtual ,也能实现多态? 在子类的空间里，有没有父类的这个函数，或者父类的私有变量?<br>答案：只要基类在定义成员函数时已经声明了virtual关键字，在派生类实现的时候覆盖该函数时，virtual关键字可加可不加，不影响多态的实现。子类的空间里有父类的所有变量(static除外)。  </p>
-<p>3.构造函数可以为虚函数吗？<br>不能，构造函数是在对象完全构造之前运行的，在构造函数运行的时候，对象的动态类型还不完整。</p>
+<p>1.多态类中的虚函数表是Compile-Time，还是Run-Time时建立的?<br>
+答案：虚拟函数表是在编译期就建立了,各个虚拟函数这时被组织成了一个虚拟函数的入口地址的数组.而对象的隐藏成员–虚拟函数表指针是在运行期–也就是构造函数被调用时进行初始化的,这是实现多态的关键.</p>
+<p>2.一个父类写了一个virtual 函数，如果子类覆盖它的函数不加virtual ,也能实现多态? 在子类的空间里，有没有父类的这个函数，或者父类的私有变量?<br>
+答案：只要基类在定义成员函数时已经声明了virtual关键字，在派生类实现的时候覆盖该函数时，virtual关键字可加可不加，不影响多态的实现。子类的空间里有父类的所有变量(static除外)。</p>
+<p>3.构造函数可以为虚函数吗？<br>
+不能，构造函数是在对象完全构造之前运行的，在构造函数运行的时候，对象的动态类型还不完整。</p>
         
           <a class="article-more-a" href="/2015/05/19/2015趋势科技校招笔试面试/#more">more >></a>
         
@@ -969,12 +1002,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.<br>For example, given the following triangle </p>
-<pre><code>   [2],
-  [3,4],
- [6,5,7],
-[4,1,8,3]
-</code></pre><p>The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).</p>
+        <p>原题：Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.<br>
+For example, given the following triangle</p>
+<pre><code>    [2],
+   [3,4],
+  [6,5,7],
+ [4,1,8,3]
+</code></pre>
+<p>The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).</p>
 <p>Note:Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
         
           <a class="article-more-a" href="/2015/05/15/[LeetCode]120-Triangle/#more">more >></a>
@@ -1144,11 +1179,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">

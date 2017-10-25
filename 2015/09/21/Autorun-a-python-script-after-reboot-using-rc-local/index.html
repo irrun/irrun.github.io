@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Autorun a python script after reboot using rc.local | Raina Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1./home/lvtest/test/test.py　　12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below:123cd /home/lvtest/tests">
+  <meta name="description" content="1./home/lvtest/test/test.py 12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below: 123cd /home/lvtest/tests">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Autorun a python script after reboot using rc.local">
 <meta property="og:url" content="http://yoursite.com/2015/09/21/Autorun-a-python-script-after-reboot-using-rc-local/index.html">
 <meta property="og:site_name" content="Raina Blog">
-<meta property="og:description" content="1./home/lvtest/test/test.py　　12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below:123cd /home/lvtest/tests">
+<meta property="og:description" content="1./home/lvtest/test/test.py 12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below: 123cd /home/lvtest/tests">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-13T04:10:05.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Autorun a python script after reboot using rc.local">
-<meta name="twitter:description" content="1./home/lvtest/test/test.py　　12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below:123cd /home/lvtest/tests">
+<meta name="twitter:description" content="1./home/lvtest/test/test.py 12345from datetime import datetimenow=datetime.now()f=open(&apos;test.log&apos;,&apos;a&apos;)f.write(&apos;%s &apos;%now)f.close() 2.edit /etc/rc.local with adding codes below: 123cd /home/lvtest/tests">
   
     <link rel="alternative" href="/atom.xml" title="Raina Blog" type="application/atom+xml">
   
@@ -181,12 +181,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1./home/lvtest/test/test.py　　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from datetime import datetime</div><div class="line">now=datetime.now()</div><div class="line">f=open(<span class="string">'test.log'</span>,<span class="string">'a'</span>)</div><div class="line">f.write(<span class="string">'%s '</span>%now)</div><div class="line">f.close()</div></pre></td></tr></table></figure></p>
-<p>2.edit /etc/rc.local with adding codes below:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/lvtest/<span class="built_in">test</span></div><div class="line">su lvtest -c <span class="string">"python /home/lvtest/test/test.py"</span></div><div class="line"><span class="built_in">exit</span> 0　　<span class="comment"># ? if it is necessary</span></div></pre></td></tr></table></figure></p>
+        <p>1./home/lvtest/test/test.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from datetime import datetime</div><div class="line">now=datetime.now()</div><div class="line">f=open(<span class="string">'test.log'</span>,<span class="string">'a'</span>)</div><div class="line">f.write(<span class="string">'%s '</span>%now)</div><div class="line">f.close()</div></pre></td></tr></table></figure>
+<p>2.edit /etc/rc.local with adding codes below:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/lvtest/<span class="built_in">test</span></div><div class="line">su lvtest -c <span class="string">"python /home/lvtest/test/test.py"</span></div><div class="line"><span class="built_in">exit</span> 0　　<span class="comment"># ? if it is necessary</span></div></pre></td></tr></table></figure>
 <p>3.Make your /etc/rc.local executable in case it is not already executable by</p>
-<p>　　sudo chown root /etc/rc.local<br>　　sudo chmod 755 /etc/rc.local</p>
+<p>sudo chown root /etc/rc.local<br>
+　　sudo chmod 755 /etc/rc.local</p>
 <p>4.Check everything works fine by executing</p>
-<p>　　sudo /etc/rc.local start</p>
+<p>sudo /etc/rc.local start</p>
 
       
 
@@ -285,7 +288,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hexo+Github搭建个人博客
+          Hexo+Github开坑记
         
       </div>
     </a>
@@ -417,11 +420,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">leisure</a>
               </li>
              
               <li class="article-tag-list-item">
